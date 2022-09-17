@@ -105,3 +105,23 @@ person = {
 }
 print(person["ID"])
 print(f'The ID of {person["name"]} is {person["ID"]}.')
+
+'''
+SETs
+'''
+
+misNumeros = [1,1,1,2,3,4,5,6,7,8,9,3,2,5,3]
+
+misNumerosNoRepetidos = set(misNumeros)
+
+print(*misNumerosNoRepetidos)
+
+miOtroSetDeDatos = set(["a", "a", "a", "b"])
+print(*miOtroSetDeDatos)
+
+NumberList = [1,1,5,2,2,10,9]
+NumberList.sort()
+print(NumberList)
+
+NumberList.reverse()
+print(NumberList)
