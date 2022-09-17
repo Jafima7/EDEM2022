@@ -1,0 +1,95 @@
+'''
+Esto es un un comentario
+especialmente largo
+'''
+
+print("Hola Mundo!")
+
+user = "Max"
+print("Hola" + " " + user)
+
+user_ID = 20
+print(7 + user_ID)
+
+user_ID = 20.6
+print(round(7 + user_ID))
+
+user = 200
+user = 2 * user
+print(user)
+
+new_user:str = "Sami"
+new_user = 7
+print(new_user)
+
+# Usar print con "f" para formatear
+user = "Javier"
+print(f"Hola, {user}!")
+
+'''
+When formatting with "f", you can include strings with numbers in the same expression
+'''
+print(f"Hola, Agente #{new_user}!")
+
+bienvenida = f"Hola {user}"
+print(f"{bienvenida}, tu numero de usuario es {new_user}")
+
+user = "Juan"
+new_user = 3
+
+'''
+Dos maneras distintas de crear
+salto de linea (line break)
+'''
+print(f"Hola {user},\ntu numero es {new_user}")
+
+print(f'''Hola {user},
+tu numero es {new_user}''')
+
+'''
+Con print puedes usar tambien a triple double 
+quotations en vez de triple single quotations
+'''
+print(f"""Hola {user},
+tu numero es {new_user}""")
+
+'''
+str
+int
+float
+list [ ..., ... ]
+tuple ( .., ... )
+set
+range
+complex
+frozenset
+bytes
+'''
+
+'''
+Bool
+'''
+casado: bool = True
+print(f'Casado? {casado}')
+
+'''
+Listas
+'''
+Lista: [str] = ["Martin", "Juan", "Pablo"]
+print(Lista)
+print(Lista)
+print(Lista[0])
+print(Lista[2])
+
+# Indexing is efficient
+ListaCompra: [str] = ["Huevos", "Tomates", "Pan", "Yogur"]
+print(ListaCompra[-2], ListaCompra[-1])
+print(ListaCompra[-2:])
+print(*ListaCompra[-2:])
+
+'''
+Rangos
+'''
+# How to show the even numbers from 0 to 10
+miRango = range(2,11,2)
+print(*miRango)
