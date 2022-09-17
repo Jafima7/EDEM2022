@@ -125,3 +125,7 @@ print(NumberList)
 
 NumberList.reverse()
 print(NumberList)
+
+# Using the input function
+name = input("Dime tu nombre: ")
+print(f"Has escrito: {name}")
