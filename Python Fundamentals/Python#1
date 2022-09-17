@@ -93,3 +93,7 @@ Rangos
 # How to show the even numbers from 0 to 10
 miRango = range(2,11,2)
 print(*miRango)
+
+# Odd numbers from 0 to 10
+miRango = range(1,10,2)
+print(*miRango)
