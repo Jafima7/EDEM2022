@@ -94,6 +94,14 @@ Rangos
 miRango = range(2,11,2)
 print(*miRango)
 
-# Odd numbers from 0 to 10
-miRango = range(1,10,2)
-print(*miRango)
+'''
+Diccionarios
+'''
+person = {
+  "name": "Martin",
+  "age": 33,
+  "ID": "12345H",
+  "married": True
+}
+print(person["ID"])
+print(f'The ID of {person["name"]} is {person["ID"]}.')
