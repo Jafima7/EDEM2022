@@ -1,0 +1,69 @@
+# Reto 1
+
+Nombre = "Javier"
+Apellidos = "Figueroa Mayordomo"
+Edad = 28
+Email = "email@gmail.com"
+Telefono = "12345678"
+Casado = False
+Con_Hijos = False
+Lista_de_amigos = ["Janice", "John", "Oliver"]
+Peliculas_vistas = {
+  1: "Gladiator",
+  2: "The Fountain",
+  3: "The Big Lebowski"
+}
+
+print(f'''
+  {Nombre},
+  {Apellidos},
+  {Edad},
+  {Email},
+  {Telefono},
+  {Casado},
+  {Con_Hijos},
+  {Lista_de_amigos},
+  {Peliculas_vistas}'''
+)
+
+
+# Reto 2
+
+def Impares(numero_inicial, numero_final):
+  x1 = numero_inicial + 1
+  if(numero_inicial % 2 == 1):
+    print(*range(numero_inicial, numero_final, 2))
+  else:
+    (print(*range(x1, numero_final, 2)))
+
+Impares(3, 12)
+Impares(4, 13)
+
+
+# Reto 3
+
+Cien_a_Uno = range(100, 0, -1)
+print(*Cien_a_Uno)
+
+
+# Reto 4
+
+def Reverse_list(list):
+  list.reverse()
+  print(list)
+
+Reverse_list(["Tom", "John", "Sarah"])
+
+
+# Reto 5
+
+def Password():
+  Password = input("What is the password? ")
+  while(Password != "admin"):
+    Password = input("What is the password? ")
+    if(Password == "admin"):
+      break
+  print("Welcome to the program, Mr. Admin")
+
+Password()
+
