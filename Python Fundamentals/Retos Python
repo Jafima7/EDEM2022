@@ -1,4 +1,8 @@
-# Reto 1
+'''
+Challenge #1: Print the following: name, last names, 
+age, email, phone number,  Married (Yes/No), 
+Children (Yes/No), Friends (List), Watched movies (dictionary)
+'''
 
 Nombre = "Javier"
 Apellidos = "Figueroa Mayordomo"
@@ -27,7 +31,10 @@ print(f'''
 )
 
 
-# Reto 2
+'''
+Challenge #2: Create a function to show odd numbers between 
+a starting number and a finishing number
+'''
 
 def Impares(numero_inicial, numero_final):
   x1 = numero_inicial + 1
@@ -40,13 +47,17 @@ Impares(3, 12)
 Impares(4, 13)
 
 
-# Reto 3
+'''
+Challenge #3: Count from 1 to 100 in reverse (countdown instead)
+'''
 
 Cien_a_Uno = range(100, 0, -1)
 print(*Cien_a_Uno)
 
 
-# Reto 4
+'''
+Challenge #4: Create a function to reverse the order of a list
+'''
 
 def Reverse_list(list):
   list.reverse()
@@ -55,7 +66,11 @@ def Reverse_list(list):
 Reverse_list(["Tom", "John", "Sarah"])
 
 
-# Reto 5
+'''
+Challenge #5: Create a program where you have to type a password,
+with the prompt repeating until you insert the correct password
+which is "admin"
+'''
 
 def Password():
   Password = input("What is the password? ")
