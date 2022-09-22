@@ -75,14 +75,14 @@ print(f'Casado? {casado}')
 '''
 Listas
 '''
-Lista: [str] = ["Martin", "Juan", "Pablo"]
+Lista:str = ["Martin", "Juan", "Pablo"]
 print(Lista)
 print(Lista)
 print(Lista[0])
 print(Lista[2])
 
 # Indexing is efficient
-ListaCompra: [str] = ["Huevos", "Tomates", "Pan", "Yogur"]
+ListaCompra:str = ["Huevos", "Tomates", "Pan", "Yogur"]
 print(ListaCompra[-2], ListaCompra[-1])
 print(ListaCompra[-2:])
 print(*ListaCompra[-2:])
