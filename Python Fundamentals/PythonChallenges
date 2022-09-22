@@ -95,6 +95,7 @@ def Adult_or_Not():
     else:
       print("You are not an adult yet")
 
+
 '''
 Challenge 7: Create a function where you type a password, 
 and if it matches the correct one then the screen shows 
@@ -108,3 +109,15 @@ def Text_Match():
     print(f"{a} is the same as {b}")
   else:
     print(f"{a} is not the same as {b}")
+
+
+'''
+Challenge 8: Define a function that checks whether a number 
+is prime or not
+'''
+
+def is_Prime(a):
+  for x in range(2, a):
+    if(a % 2 == 0):
+      return False
+  return True
