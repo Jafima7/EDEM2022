@@ -1,11 +1,6 @@
-Nombre = "John"
-Email = "john@gmail.com"
-Password = "password"
-Edad = 30
-
-Usuario: {
-    Nombre: "John",
-    Email: "john@gmail.com",
-    Password: "password",
-    Edad: 30
+Usuario = {
+    "Nombre": "John",
+    "Email": "john@gmail.com",
+    "Password": "password",
+    "Edad": 30
 }
