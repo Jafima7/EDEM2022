@@ -121,3 +121,17 @@ def is_Prime(a):
     if(a % 2 == 0):
       return False
   return True
+
+
+'''
+Challenge 9: Define a funtion that determines whether a year
+is a leap year or not
+'''
+
+def Leap_Year(a):
+  if((a % 4) == 0):
+    return True
+    if(((a % 100) == 0) and ((a % 400) != 0)):
+      return False
+  else:
+    return False
