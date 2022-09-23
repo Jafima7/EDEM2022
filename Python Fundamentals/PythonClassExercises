@@ -8,7 +8,7 @@ EXERCISE
 - If they guess wrong on all tries: They lose 2 points
 '''
 
-def SecretNumber():
+def secret_number():
   score = 0
   tries = 2
   chosen_number = int(input("What is the secret number? "))
