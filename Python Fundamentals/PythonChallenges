@@ -39,22 +39,22 @@ Challenge #2: Create a function to show odd numbers between
 a starting number and a finishing number
 '''
 
-def Impares(numero_inicial: int, numero_final: int):
+def impares(numero_inicial: int, numero_final: int):
   x1 = numero_inicial + 1
   if(numero_inicial % 2 == 1):
     print(*range(numero_inicial, numero_final, 2))
   else:
     (print(*range(x1, numero_final, 2)))
 
-Impares(3, 12)
-Impares(4, 13)
+impares(3, 12)
+impares(4, 13)
 
 
 '''
 Challenge #3: Count from 1 to 100 in reverse (countdown instead)
 '''
 
-Cien_a_Uno = range(100, 0, -1)
+cien_a_uno = range(100, 0, -1)
 print(*Cien_a_Uno)
 
 
@@ -62,11 +62,11 @@ print(*Cien_a_Uno)
 Challenge #4: Create a function to reverse the order of a list
 '''
 
-def Reverse_list(list):
+def reverse_list(list):
   list.reverse()
   print(list)
 
-Reverse_list(["Tom", "John", "Sarah"])
+reverse_list(["Tom", "John", "Sarah"])
 
 
 '''
@@ -75,7 +75,7 @@ with the prompt repeating until you insert the correct password
 which is "admin"
 '''
 
-def Password():
+def password():
   Password = input("What is the password? ")
   while(Password != "admin"):
     Password = input("What is the password? ")
@@ -83,15 +83,13 @@ def Password():
       break
   print("Welcome to the program, Mr. Admin")
 
-Password()
-
 
 '''
 Challenge #6: Create a function where when you type your age, 
 it detects whether you're an adult or not
 '''
 
-def Adult_or_Not():
+def adult_or_not():
     Age = int(input("What is your age? "))
     if (Age >= 18):
       print("You are an adult")
@@ -105,7 +103,7 @@ and if it matches the correct one then the screen shows
 that they're the same
 '''
 
-def Text_Match():
+def text_match():
   a = "password"
   b = input("What is the password? ")
   if(a.lower() == b.lower()):
@@ -119,7 +117,7 @@ Challenge 8: Define a function that checks whether a number
 is prime or not
 '''
 
-def is_Prime(a: int):
+def is_prime(a: int):
   for x in range(2, a):
     if(a % 2 == 0):
       return False
@@ -131,7 +129,7 @@ Challenge 9: Define a function that determines whether a year
 that you enter into the console is a leap year or not
 '''
 
-def LeapYear():
+def leap_year():
   Year = int(input("Pick a year that is a leap year: "))
   while(Year % 4 != 0):
     Year = int(input("Pick a year that is a leap year: "))
