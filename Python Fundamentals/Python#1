@@ -75,56 +75,56 @@ print(f'Casado? {casado}')
 '''
 Listas
 '''
-Lista:str = ["Martin", "Juan", "Pablo"]
-print(Lista)
-print(Lista)
-print(Lista[0])
-print(Lista[2])
+lista:str = ["Martin", "Juan", "Pablo"]
+print(lista)
+print(lista)
+print(lista[0])
+print(lista[2])
 
 # Indexing is efficient
-ListaCompra:str = ["Huevos", "Tomates", "Pan", "Yogur"]
-print(ListaCompra[-2], ListaCompra[-1])
-print(ListaCompra[-2:])
-print(*ListaCompra[-2:])
+lista_compra:str = ["Huevos", "Tomates", "Pan", "Yogur"]
+print(lista_compra[-2], lista_compra[-1])
+print(lista_compra[-2:])
+print(lista_compra[-2:])
 
 '''
 Rangos
 '''
 # How to show the even numbers from 0 to 10
-miRango = range(2,11,2)
-print(*miRango)
+mi_rango = range(2,11,2)
+print(*mi_rango)
 
 '''
 Diccionarios
 '''
 person = {
-  "name": "Martin",
-  "age": 33,
+  "Name": "Martin",
+  "Age": 33,
   "ID": "12345H",
-  "married": True
+  "Married": True
 }
 print(person["ID"])
-print(f'The ID of {person["name"]} is {person["ID"]}.')
+print(f'The ID of {person["Name"]} is {person["ID"]}.')
 
 '''
 SETs
 '''
 
-misNumeros = [1,1,1,2,3,4,5,6,7,8,9,3,2,5,3]
+mis_numeros = [1,1,1,2,3,4,5,6,7,8,9,3,2,5,3]
 
-misNumerosNoRepetidos = set(misNumeros)
+mis_numeros_no_repetidos = set(mis_numeros)
 
-print(*misNumerosNoRepetidos)
+print(*mis_numeros_no_repetidos)
 
-miOtroSetDeDatos = set(["a", "a", "a", "b"])
-print(*miOtroSetDeDatos)
+mi_otro_set_de_datos = set(["a", "a", "a", "b"])
+print(*mi_otro_set_de_datos)
 
-NumberList = [1,1,5,2,2,10,9]
-NumberList.sort()
-print(NumberList)
+number_list = [1,1,5,2,2,10,9]
+number_list.sort()
+print(number_list)
 
-NumberList.reverse()
-print(NumberList)
+number_list.reverse()
+print(number_list)
 
 # Using the input function
 name = input("Dime tu nombre: ")
