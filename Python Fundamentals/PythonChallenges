@@ -131,10 +131,13 @@ Challenge 9: Define a funtion that determines whether a year
 is a leap year or not
 '''
 
-def Leap_Year(a: int):
-  if(((a % 4) == 0) and (a % 100) != 0):
-    return True
-  elif(((a % 100) == 0) and ((a % 400) == 0)):
-    return True
+def LeapYear():
+  Year = int(input("Pick a year that is a leap year: "))
+  while(Year % 4 != 0):
+    Year = int(input("Pick a year that is a leap year: "))
+  if(((Year % 4) == 0) and (Year % 100) != 0):
+    print(True)
+  elif(((Year % 100) == 0) and ((Year % 400) == 0)):
+    print(True)
   else:
-    return False
+    Year = int(input("Pick a year that is a leap year: "))
