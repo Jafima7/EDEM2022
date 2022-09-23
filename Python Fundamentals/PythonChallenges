@@ -133,11 +133,12 @@ def leap_year():
   year = int(input("Pick a year that is a leap year: "))
   while(year % 4 != 0):
     year = int(input("Pick a year that is a leap year: "))
-  if(((year % 4) == 0) and (year % 100) != 0):
+  if(year % 100 != 0):
     print(True)
   elif(((year % 100) == 0) and ((year % 400) == 0)):
     print(True)
   else:
     year = int(input("Pick a year that is a leap year: "))
     
+
 
