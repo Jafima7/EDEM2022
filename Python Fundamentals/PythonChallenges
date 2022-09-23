@@ -7,30 +7,30 @@ Children (Yes/No), Friends (List), Watched movies (dictionary)
 from pickletools import int4
 
 
-Name = "Javier"
-Last_Names = "Figueroa Mayordomo"
-Age = 28
-Email = "email@gmail.com"
-Phone_Number = "12345678"
-Married = False
-Children = False
-Friend_List = ["Janice", "John", "Oliver"]
-Movies_Watched = {
+name = "Javier"
+last_names = "Figueroa Mayordomo"
+age = 28
+email = "email@gmail.com"
+phone_number = "12345678"
+married = False
+children = False
+friend_list = ["Janice", "John", "Oliver"]
+movies_watched = {
   1: "Gladiator",
   2: "The Fountain",
   3: "The Big Lebowski"
 }
 
 print(f'''
-  {Name},
-  {Last_Names},
-  {Age},
-  {Email},
-  {Phone_Number},
-  {Married},
-  {Children},
-  {Friend_List},
-  {Movies_Watched}'''
+  {name},
+  {last_names},
+  {age},
+  {email},
+  {phone_number},
+  {married},
+  {children},
+  {friend_list},
+  {movies_watched}'''
 )
 
 
@@ -76,10 +76,10 @@ which is "admin"
 '''
 
 def password():
-  Password = input("What is the password? ")
-  while(Password != "admin"):
-    Password = input("What is the password? ")
-    if(Password == "admin"):
+  password = input("What is the password? ")
+  while(password != "admin"):
+    password = input("What is the password? ")
+    if(password == "admin"):
       break
   print("Welcome to the program, Mr. Admin")
 
@@ -90,8 +90,8 @@ it detects whether you're an adult or not
 '''
 
 def adult_or_not():
-    Age = int(input("What is your age? "))
-    if (Age >= 18):
+    age = int(input("What is your age? "))
+    if (age >= 18):
       print("You are an adult")
     else:
       print("You are not an adult yet")
@@ -130,12 +130,14 @@ that you enter into the console is a leap year or not
 '''
 
 def leap_year():
-  Year = int(input("Pick a year that is a leap year: "))
-  while(Year % 4 != 0):
-    Year = int(input("Pick a year that is a leap year: "))
-  if(((Year % 4) == 0) and (Year % 100) != 0):
+  year = int(input("Pick a year that is a leap year: "))
+  while(year % 4 != 0):
+    year = int(input("Pick a year that is a leap year: "))
+  if(((year % 4) == 0) and (year % 100) != 0):
     print(True)
-  elif(((Year % 100) == 0) and ((Year % 400) == 0)):
+  elif(((year % 100) == 0) and ((year % 400) == 0)):
     print(True)
   else:
-    Year = int(input("Pick a year that is a leap year: "))
+    year = int(input("Pick a year that is a leap year: "))
+    
+
