@@ -1,0 +1,35 @@
+'''
+EJERCICIO
+- Por consola el usuario debe acertar un número secreto
+- Tiene 3 intentos
+- Si acierta en el primer intento: Se suman 5 puntos y el resultado se multiplican por 2
+- Si acierta en el segundo intento: Se suman 5 puntos
+- Si acierta a la tercera: Se suma 2 puntos
+- Si falla todas las veces: Se resta 2 puntos
+'''
+
+def SecretNumber():
+  score = 0
+  tries = 2
+  chosen_number = int(input("What is the secret number? "))
+  while chosen_number != 77 and tries > 0:
+    if(chosen_number < 77):
+      print("Your chosen number is too low")
+      chosen_number = int(input("What is the secret number? "))
+    elif(chosen_number > 77):
+      print("Your chosen number is too high")
+      chosen_number = int(input("What is the secret number? "))
+    tries -= 1
+  if(tries == 2):
+    score += 5 * 2
+    print(f"Correct! Your score is {score}")
+  elif(tries == 1):
+    score += 5
+    print(f"Correct! Your score is {score}")
+  elif(tries == 0 and chosen_number == 77):
+    score += 2
+    print(f"Correct! Your score is {score}")
+  elif(tries == 0 and chosen_number != 77):
+    score -= 2
+    print(f"You're out of guesses! Your score is {score}")
+    
