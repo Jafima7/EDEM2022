@@ -7,30 +7,30 @@ Children (Yes/No), Friends (List), Watched movies (dictionary)
 from pickletools import int4
 
 
-Nombre = "Javier"
-Apellidos = "Figueroa Mayordomo"
-Edad = 28
+Name = "Javier"
+Last_Names = "Figueroa Mayordomo"
+Age = 28
 Email = "email@gmail.com"
-Telefono = "12345678"
-Casado = False
-Con_Hijos = False
-Lista_de_amigos = ["Janice", "John", "Oliver"]
-Peliculas_vistas = {
+Phone_Number = "12345678"
+Married = False
+Children = False
+Friend_List = ["Janice", "John", "Oliver"]
+Movies_Watched = {
   1: "Gladiator",
   2: "The Fountain",
   3: "The Big Lebowski"
 }
 
 print(f'''
-  {Nombre},
-  {Apellidos},
-  {Edad},
+  {Name},
+  {Last_Names},
+  {Age},
   {Email},
-  {Telefono},
-  {Casado},
-  {Con_Hijos},
-  {Lista_de_amigos},
-  {Peliculas_vistas}'''
+  {Phone_Number},
+  {Married},
+  {Children},
+  {Friend_List},
+  {Movies_Watched}'''
 )
 
 
@@ -39,23 +39,23 @@ Challenge #2: Create a function to show odd numbers between
 a starting number and a finishing number
 '''
 
-def impares(numero_inicial: int, numero_final: int):
+def odd_numbers(numero_inicial: int, numero_final: int):
   x1 = numero_inicial + 1
   if(numero_inicial % 2 == 1):
     print(*range(numero_inicial, numero_final, 2))
   else:
     (print(*range(x1, numero_final, 2)))
 
-impares(3, 12)
-impares(4, 13)
+odd_numbers(3, 12)
+odd_numbers(4, 13)
 
 
 '''
 Challenge #3: Count from 1 to 100 in reverse (countdown instead)
 '''
 
-cien_a_uno = range(100, 0, -1)
-print(*Cien_a_Uno)
+hundred_to_one = range(100, 0, -1)
+print(*hundred_to_one)
 
 
 '''
