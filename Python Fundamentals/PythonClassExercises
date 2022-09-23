@@ -1,11 +1,11 @@
 '''
-EJERCICIO
-- Por consola el usuario debe acertar un número secreto
-- Tiene 3 intentos
-- Si acierta en el primer intento: Se suman 5 puntos y el resultado se multiplican por 2
-- Si acierta en el segundo intento: Se suman 5 puntos
-- Si acierta a la tercera: Se suma 2 puntos
-- Si falla todas las veces: Se resta 2 puntos
+EXERCISE
+- Through the console, the user should try to guess a secret number
+- They have 3 tries
+- If they guess correctly on the first try: They get 5 points and the result is multiplied by 2
+- If they guess on the second try: They get 5 points
+- If they guess on the third try: They get 2 points
+- If they guess wrong on all tries: They lose 2 points
 '''
 
 def SecretNumber():
@@ -32,4 +32,3 @@ def SecretNumber():
   elif(tries == 0 and chosen_number != 77):
     score -= 2
     print(f"You're out of guesses! Your score is {score}")
-    
