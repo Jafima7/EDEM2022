@@ -129,9 +129,9 @@ is a leap year or not
 '''
 
 def Leap_Year(a):
-  if((a % 4) == 0):
+  if(((a % 4) == 0) and (a % 100) != 0):
     return True
-    if(((a % 100) == 0) and ((a % 400) != 0)):
-      return False
+  elif(((a % 100) == 0) and ((a % 400) == 0)):
+    return True
   else:
     return False
