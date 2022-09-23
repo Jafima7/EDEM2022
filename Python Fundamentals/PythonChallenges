@@ -127,8 +127,8 @@ def is_Prime(a: int):
 
 
 '''
-Challenge 9: Define a funtion that determines whether a year
-is a leap year or not
+Challenge 9: Define a function that determines whether a year
+that you enter into the console is a leap year or not
 '''
 
 def LeapYear():
