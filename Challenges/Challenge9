@@ -1,0 +1,11 @@
+'''
+Challenge 9: Define a function that determines whether a year
+that you enter into the console is a leap year or not
+'''
+
+def leap_year():
+  intento = int(input("Escoge un año que sea bisiesto: "))
+  while not ((intento % 4 == 0 and intento % 100 != 0) or (intento % 100 == 0 and intento % 400 == 0)):
+    intento = int(input("Escoge un año que sea bisiesto: "))
+  else:
+    print("Ese año es bisiesto")
