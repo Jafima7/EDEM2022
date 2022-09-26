@@ -1,0 +1,34 @@
+'''
+Challenge #1: Print the following: name, last names, 
+age, email, phone number,  Married (Yes/No), 
+Children (Yes/No), Friends (List), Watched movies (dictionary)
+'''
+
+from pickletools import int4
+
+
+name = "Javier"
+last_names = "Figueroa Mayordomo"
+age = 28
+email = "email@gmail.com"
+phone_number = "12345678"
+married = False
+children = False
+friend_list = ["Janice", "John", "Oliver"]
+movies_watched = {
+  1: "Gladiator",
+  2: "The Fountain",
+  3: "The Big Lebowski"
+}
+
+print(f'''
+  {name},
+  {last_names},
+  {age},
+  {email},
+  {phone_number},
+  {married},
+  {children},
+  {friend_list},
+  {movies_watched}'''
+)

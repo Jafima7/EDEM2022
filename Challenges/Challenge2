@@ -1,0 +1,14 @@
+'''
+Challenge #2: Create a function to show odd numbers between 
+a starting number and a finishing number
+'''
+
+def odd_numbers(numero_inicial: int, numero_final: int):
+  x1 = numero_inicial + 1
+  if(numero_inicial % 2 == 1):
+    print(*range(numero_inicial, numero_final, 2))
+  else:
+    (print(*range(x1, numero_final, 2)))
+
+odd_numbers(3, 12)
+odd_numbers(4, 13)

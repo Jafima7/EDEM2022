@@ -1,0 +1,20 @@
+'''
+Challenge 10: Create a function where the user inputs details of a movie
+which get assigned to a variable, and afterwards the details get printed 
+on the screen. Also, the variable becomes global
+'''
+
+movie = {}
+
+def insert_movie_details():
+  global movie
+  title = input("What is the title of the movie? ")
+  movie.update({"title": title})
+  director = input("Who is the director? ")
+  movie.update({"director": director})
+  year = input("In what year was it released? ")
+  movie.update({"year": year})
+  country = input("What country is the movie from? ")
+  movie.update({"country": country})
+
+  print(movie)

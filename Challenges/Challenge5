@@ -1,0 +1,13 @@
+'''
+Challenge #5: Create a program where you have to type a password,
+with the prompt repeating until you insert the correct password
+which is "admin"
+'''
+
+def password():
+  password = input("What is the password? ")
+  while(password != "admin"):
+    password = input("What is the password? ")
+    if(password == "admin"):
+      break
+  print("Welcome to the program, Mr. Admin")

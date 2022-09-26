@@ -1,0 +1,9 @@
+'''
+Challenge #4: Create a function to reverse the order of a list
+'''
+
+def reverse_list(list):
+  list.reverse()
+  print(list)
+
+reverse_list(["Tom", "John", "Sarah"])

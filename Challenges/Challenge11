@@ -1,0 +1,12 @@
+'''
+Challenge 11: Create a function where the names of students
+in a programming class get added to a list, and then the 
+list is shown on the screen
+'''
+
+def programming_class():
+  class_members = []
+  class_members.append("Javier")
+  class_members.append("Max")
+  class_members.append("Sami")
+  print(class_members)

@@ -1,0 +1,11 @@
+'''
+Challenge #6: Create a function where when you type your age, 
+it detects whether you're an adult or not
+'''
+
+def adult_or_not():
+    age = int(input("What is your age? "))
+    if (age >= 18):
+      print("You are an adult")
+    else:
+      print("You are not an adult yet")
