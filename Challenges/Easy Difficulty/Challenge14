@@ -1,0 +1,10 @@
+'''
+Challenge 14: Create a function that takes a list of numbers and returns
+a new list with each number squared
+'''
+
+def square_list(list):
+  squared_list = []
+  for i in list:
+    squared_list.append(i ** 2)
+  print(squared_list)
