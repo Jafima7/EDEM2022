@@ -1,0 +1,14 @@
+'''
+Challenge 16: Create a script where one date is subtracted by another,
+to show the difference in days
+'''
+
+from datetime import date
+
+def difference_dates (date1, date2):
+  return (date2-date1).days
+
+date1 = date(2022, 9, 8)
+date2 = date(2022, 9, 26)
+
+print(f'{difference_dates(date1, date2)} days')
