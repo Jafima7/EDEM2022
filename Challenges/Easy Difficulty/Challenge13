@@ -10,6 +10,6 @@ def area_circle(radius):
   area = math.pi * (radius ** 2)
   return area
 
-def area_cylinder(radius, height):
-  area_cylinder = (2 * area_circle(radius)) + (2 * math.pi * radius * height)
-  print(area_cylinder)
+def volume_cylinder(radius, height):
+  volume = area_circle(radius) * height
+  print(volume)
