@@ -1,0 +1,11 @@
+'''
+Challenge 17: Create a function where you remove a character from
+a certain position in a string
+'''
+
+def remove_character(string: str, position: int):
+    print(string[0 : position :] + string[position + 1 : :])
+
+remove_character("Madrid", 0)
+remove_character("Madrid", 3)
+remove_character("Madrid", 5)
