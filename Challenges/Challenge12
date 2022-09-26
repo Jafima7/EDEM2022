@@ -1,0 +1,16 @@
+'''
+Challenge 12: Create a function to calculate the area of a triangle
+where the parameter height and base are chosen by the user. Also,
+create a function where the area of a circle is calculated, where 
+the user chooses the radius of the circle.
+'''
+
+import math
+
+def area_triangle(height, base):
+  area = (height * base) / 2
+  print(int(area))
+
+def area_circle(radius):
+  area = math.pi * (radius ** 2)
+  print(area)
