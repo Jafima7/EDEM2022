@@ -1,7 +1,7 @@
 '''
-Challenge 13: Create a function to calculate the area of a cylinder,
-using a function to calculate the area of a circle. The user chooses
-the parameters: radius of the circle, and height of the cylinder.
+Challenge 13: Create a function to calculate the volume of a cylinder,
+using the function to calculate the area of a circle (from Challenge 12). The only
+input for the cylinder volume calculation function is the height of the cylinder.
 '''
 
 import math
@@ -13,3 +13,6 @@ def area_circle(radius):
 def volume_cylinder(radius, height):
   volume = area_circle(radius) * height
   print(volume)
+
+area_circle()
+volume_cylinder()
