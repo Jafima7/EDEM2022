@@ -6,13 +6,15 @@ input for the cylinder volume calculation function is the height of the cylinder
 
 import math
 
-def area_circle(radius):
-  area = math.pi * (radius ** 2)
-  return area
+def area_circle():
+  radius = float(input("What is the radius of the circle? "))
+  global area_cir
+  area_cir = math.pi * (radius ** 2)
+  return area_cir
 
-def volume_cylinder(radius, height):
-  volume = area_circle(radius) * height
-  print(volume)
+def volume_cylinder():
+  height = float(input("What is the height of the cylinder in cm? "))
+  print(height * area_cir)
 
 area_circle()
 volume_cylinder()
