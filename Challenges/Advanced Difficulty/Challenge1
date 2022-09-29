@@ -79,3 +79,5 @@ def album_discount():
     print(purchase_text)
   elif((album_choice == "Abraxas") and (finish_purchase == 0)):
     print(purchase_text)
+  else:
+    print("That album is either not in stock or doesn't exist")
