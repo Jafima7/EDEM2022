@@ -1,0 +1,74 @@
+from datetime import datetime
+
+filosofem = {
+"Name": "Filosofem",
+"Artist": "Burzum",
+"Year": 1996,
+"Price": 5.00,
+"Genre": "Black Metal"
+}
+
+cross = {
+"Name": "Cross",
+"Artist": "Justice",
+"Year": 2007,
+"Price": 5.00,
+"Genre": "Electro"
+}
+
+abraxas = {
+"Name": "Abraxas",
+"Artist": "Santana",
+"Year": 1970,
+"Price": 5.00,
+"Genre": "Rock"
+}
+
+after_hours = {
+"Name": "After Hours",
+"Artist": "The Weeknd",
+"Year": 2020,
+"Price": 5.00,
+"Genre": "Pop"
+}
+
+paranoid = {
+"Name": "Paranoid",
+"Artist": "Black Sabbath",
+"Year": 1970,
+"Price": 5.00,
+"Genre": "Metal"
+}
+
+purchase_text = (f'''
+Album bought at: {datetime.now()}
+Money saved: 0.00
+Final price: 5.00
+''')
+
+discounted_purchase_text = (f'''
+Album bought at: {datetime.now()}
+Money saved: 1.50
+Final price: 3.50
+''')
+
+def album_discount():
+  print(f'''
+  {filosofem}
+  {cross}
+  {abraxas}
+  {after_hours}
+  {paranoid}
+  ''')
+  album_choice = str(input("What album from the list above do you choose? "))
+  finish_purchase = int(input("Press 0 followed by Enter if you're done with your purchase"))
+  if((album_choice == "Filosofem") and (finish_purchase == 0)):
+    print(discounted_purchase_text)
+  elif((album_choice == "Cross") and (finish_purchase == 0)):
+    print(discounted_purchase_text)
+  elif((album_choice == "Paranoid") and (finish_purchase == 0)):
+    print(purchase_text)
+  elif((album_choice == "After Hours") and (finish_purchase == 0)):
+    print(purchase_text)
+  elif((album_choice == "Abraxas") and (finish_purchase == 0)):
+    print(purchase_text)
