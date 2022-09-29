@@ -1,3 +1,10 @@
+'''
+Challenge #1: Create a function where a list of music albums
+are in stock, and the user can purchase an album. If the
+album is of the genre Black Metal or Electro, there is a 30%
+discount.
+'''
+
 from datetime import datetime
 
 filosofem = {
