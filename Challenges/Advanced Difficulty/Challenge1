@@ -1,11 +1,6 @@
-'''
-Challenge #1: Create a function where a list of music albums
-are in stock, and the user can purchase an album. If the
-album is of the genre Black Metal or Electro, there is a 30%
-discount.
-'''
-
 from datetime import datetime
+import pytz
+from pytz import timezone
 
 filosofem = {
 "Name": "Filosofem",
@@ -47,14 +42,16 @@ paranoid = {
 "Genre": "Metal"
 }
 
+cet_time = timezone('Europe/Amsterdam')
+
 purchase_text = (f'''
-Album bought at: {datetime.now()}
+Album bought at: {datetime.now(cet_time)}
 Money saved: 0.00
 Final price: 5.00
 ''')
 
 discounted_purchase_text = (f'''
-Album bought at: {datetime.now()}
+Album bought at: {datetime.now(cet_time)}
 Money saved: 1.50
 Final price: 3.50
 ''')
