@@ -3,8 +3,14 @@ Challenge 8: Define a function that checks whether a number
 is prime or not
 '''
 
-def is_prime(a: int):
-  for x in range(2, a):
-    if(a % 2 == 0):
-      return False
-  return True
+def is_prime():
+  number = int(input("Type a prime number: "))
+  if number > 1:
+    for i in range(2, int(number / 2) + 1):
+      while (number % i) == 0:
+        print("This number is not prime")
+        number = int(input("Type a prime number: "))
+    else:
+      print("This number is prime")
+  else:
+    print("This number is not prime")
