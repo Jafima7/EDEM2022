@@ -7,9 +7,8 @@ that they're the same
 def text_match():
   a = "admin"
   b = input("What is the password? ")
-  while(a.lower() != b.lower):
+  while not (a.lower() == b.lower()):
     print(f"{a} is not the same as {b}")
     b = input("What is the password? ")
-    if(a.lower() == b.lower()):
-      print(f"{a} is the same as {b}")
-      break
+  else:
+    print(f"{a} is the same as {b}")
