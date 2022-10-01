@@ -14,7 +14,7 @@ pokemon_csv_df = pd.read_csv('pokemon_data.csv',
 pokemon_excel_df = pd.read_excel('pokemon_data.xlsx')
 
 # Leer de un TXT
-pokemon_txt_df = pd.read_csv('pokemon_data.txt', delimeter='\t')
+pokemon_txt_df = pd.read_csv('pokemon_data.txt', delimiter='\t')
 
 
 # Imprimir los Valores
