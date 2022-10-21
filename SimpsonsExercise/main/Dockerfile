@@ -1,6 +1,6 @@
-FROM python:3.9.12
+FROM python:latest
 
-COPY ./maggie_level.py /app/
+COPY maggie_level.py /app/
 COPY requirements.txt /app/
 
 WORKDIR /app/
