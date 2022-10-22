@@ -1,4 +1,4 @@
-from urllib import response
+import urllib
 import pip._vendor
 from pip._vendor import requests
 import time
