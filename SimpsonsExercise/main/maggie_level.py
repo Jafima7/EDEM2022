@@ -14,23 +14,23 @@ def simpsons_quotes():
     response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
     json_file = response.json()[0]
     if(json_file['character'] == "Lisa Simpson"):
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/lisa_quotes.csv', 'a') as Lisa:
+      with open('Lisa/lisa_quotes.csv', 'a') as Lisa:
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w = csv.DictWriter(Lisa, quotes_dict.keys())
         w.writerow(quotes_dict)
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
+      with open('General/general.csv', 'a') as General:
         w2 = csv.DictWriter(General, quotes_dict.keys())
         w2.writerow(quotes_dict)
     elif(json_file['character'] == "Homer Simpson"):
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/homer_quotes.csv', 'a') as Homer:
+      with open('Homer/homer_quotes.csv', 'a') as Homer:
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w3 = csv.DictWriter(Homer, quotes_dict.keys())
         w3.writerow(quotes_dict)
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
+      with open('General/general.csv', 'a') as General:
         w4 = csv.DictWriter(General, quotes_dict.keys())
         w4.writerow(quotes_dict)   
     else:
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
+      with open('General/general.csv', 'a') as General:
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w5 = csv.DictWriter(General, quotes_dict.keys())
         w5.writerow(quotes_dict)
