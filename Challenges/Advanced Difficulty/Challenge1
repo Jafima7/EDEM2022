@@ -77,3 +77,5 @@ def album_discount():
     print(purchase_text)
   else:
     print("That album is either not in stock or doesn't exist")
+
+album_discount()
