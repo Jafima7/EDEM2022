@@ -6,48 +6,58 @@ from pip._vendor import requests
 import time
 import csv
 import json
-import numpy as np
-import cv2
-
-def url_to_image(url):
-  resp = urllib.requests.urlopen(url)
-  image = np.asarray(bytearray(resp.read()), dtype="uint8")
-  image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-  return image
+import os
 
 response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
 
 quotes_dict = {"character": "Homer", "quote": "Doh!"}
+
+count = {}
+input_line = input("Enter a Line : ")
+list_of_words = input_line.split()
+for word in list_of_words:
+    count[word] = count.get(word, 0) + 1
+print('Word Frequency')
+for key in count.keys():
+    print(key, count[key])
 
 def simpsons_quotes():
   while True:
     response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
     json_file = response.json()[0]
     if(json_file['character'] == "Lisa Simpson"):
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/lisa_quotes.csv', 'a') as Lisa:
-        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote'], 
-                      'image': url_to_image(json_file['image'])}
+      with open('Lisa Simpson/lisa.csv', 'a') as Lisa:
+        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w = csv.DictWriter(Lisa, quotes_dict.keys())
         w.writerow(quotes_dict)
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
+        urllib.request.urlretrieve(json_file['image'],'Lisa Simpson/image.jpeg') 
+      with open('general.csv', 'a') as General:
         w2 = csv.DictWriter(General, quotes_dict.keys())
         w2.writerow(quotes_dict)
     elif(json_file['character'] == "Homer Simpson"):
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/homer_quotes.csv', 'a') as Homer:
-        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote'], 
-                      'image': url_to_image(json_file['image'])}
+      with open('Homer Simpson/homer.csv', 'a') as Homer:
+        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w3 = csv.DictWriter(Homer, quotes_dict.keys())
         w3.writerow(quotes_dict)
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
+        urllib.request.urlretrieve(json_file['image'],'Homer Simpson/image.jpeg')  
+      with open('general.csv', 'a') as General:
         w4 = csv.DictWriter(General, quotes_dict.keys())
-        w4.writerow(quotes_dict)   
+        w4.writerow(quotes_dict)    
     else:
-      with open('/Users/javierfm/Documents/GitHub/Javier_EDEM2022/SimpsonsExercise/main/general.csv', 'a') as General:
-        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote'], 
-                      'image': url_to_image(json_file['image'])}
+      char = json_file['character']
+      if not os.path.exists(f'''{char}'''):
+        os.makedirs(f'''{char}''')
+        urllib.request.urlretrieve(json_file['image'],f'''{char}/image.jpeg''')
+      with open(f'''{char}/{char}.csv''', 'a') as char:
+        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
+        w5 = csv.DictWriter(char, quotes_dict.keys())
+        w5.writerow(quotes_dict) 
+      with open('general.csv', 'a') as General:
+        quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w5 = csv.DictWriter(General, quotes_dict.keys())
         w5.writerow(quotes_dict)
+
     print(quotes_dict)
-    time.sleep(30)
+    time.sleep(5)
     
 simpsons_quotes()
