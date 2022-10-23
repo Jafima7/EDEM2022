@@ -14,7 +14,7 @@ def simpsons_quotes():
     response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
     json_file = response.json()[0]
     if(json_file['character'] == "Lisa Simpson"):
-      with open('Lisa/lisa_quotes.csv', 'a') as Lisa:
+      with open('Lisa Simpson/lisa.csv', 'a') as Lisa:
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w = csv.DictWriter(Lisa, quotes_dict.keys())
         w.writerow(quotes_dict)
@@ -22,7 +22,7 @@ def simpsons_quotes():
         w2 = csv.DictWriter(General, quotes_dict.keys())
         w2.writerow(quotes_dict)
     elif(json_file['character'] == "Homer Simpson"):
-      with open('Homer/homer_quotes.csv', 'a') as Homer:
+      with open('Homer Simpson/homer.csv', 'a') as Homer:
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w3 = csv.DictWriter(Homer, quotes_dict.keys())
         w3.writerow(quotes_dict)

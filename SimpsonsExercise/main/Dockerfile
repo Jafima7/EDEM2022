@@ -1,14 +1,15 @@
 FROM python:latest
 
-COPY ./maggie_level.py /app/
+COPY ./lisa_level.py /app/
 COPY ./requirements.txt /app/
 
 WORKDIR /app/
 
-RUN mkdir Lisa
-RUN mkdir Homer
+RUN mkdir 'Lisa Simpson'
+RUN mkdir 'Homer Simpson'
 RUN mkdir General
 
 RUN pip install requests beautifulsoup4 python-dotenv
+RUN pip3 install numpy
 RUN pip3 install -r requirements.txt
-CMD ["python", "maggie_level.py"]
+CMD ["python", "lisa_level.py"]
