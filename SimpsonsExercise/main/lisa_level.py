@@ -12,15 +12,6 @@ response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
 
 quotes_dict = {"character": "Homer", "quote": "Doh!"}
 
-count = {}
-input_line = input("Enter a Line : ")
-list_of_words = input_line.split()
-for word in list_of_words:
-    count[word] = count.get(word, 0) + 1
-print('Word Frequency')
-for key in count.keys():
-    print(key, count[key])
-
 def simpsons_quotes():
   while True:
     response = requests.get("https://thesimpsonsquoteapi.glitch.me/quotes")
@@ -30,7 +21,7 @@ def simpsons_quotes():
         quotes_dict = {'character': json_file['character'], 'quote': json_file['quote']}
         w = csv.DictWriter(Lisa, quotes_dict.keys())
         w.writerow(quotes_dict)
-        urllib.request.urlretrieve(json_file['image'],'Lisa Simpson/image.jpeg') 
+        urllib.request.urlretrieve(json_file['image'],'Lisa Simpson/image.jpeg')
       with open('general.csv', 'a') as General:
         w2 = csv.DictWriter(General, quotes_dict.keys())
         w2.writerow(quotes_dict)
