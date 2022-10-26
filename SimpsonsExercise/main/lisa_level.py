@@ -48,7 +48,15 @@ def simpsons_quotes():
         w5 = csv.DictWriter(General, quotes_dict.keys())
         w5.writerow(quotes_dict)
 
-    print(quotes_dict)
-    time.sleep(5)
+    count = {}
+    input_line = json_file['quote']
+    list_of_words = input_line.split()
+    for word in list_of_words:
+      count[word] = count.get(word, 0) + 1
+    print('Word Frequency')
+    for key in count.keys():
+      print(key, count[key])
+
+    time.sleep(30)
     
 simpsons_quotes()
