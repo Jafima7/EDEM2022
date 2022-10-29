@@ -8,3 +8,6 @@ def square_list(list):
   for i in list:
     squared_list.append(i ** 2)
   print(squared_list)
+
+square_list([2,4,6])
+# Output: [4, 16, 36]
